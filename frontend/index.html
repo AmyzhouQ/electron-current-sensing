@@ -11,13 +11,23 @@
         background-color: #dedede;
         font-size: 12px;
       }
+      .logo{
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%, -50%);
+        width: 6em;
+        height: 6em;
+        background: url(./src/assets/logo.png) no-repeat;
+        background-size: 100% 100%;
+      }
       .base {
         height: 9em;
-        left: 50%;
         margin: -7.5em;
         padding: 3em;
         position: absolute;
         top: 50%;
+        left: 50%;
         width: 9em;
         transform: rotateX(45deg) rotateZ(45deg);
         transform-style: preserve-3d;
@@ -87,17 +97,18 @@
   </head>
   <body>
     <div id="loadingPage">
-      <div class='base'>
-        <div class='cube'></div>
-        <div class='cube'></div>
-        <div class='cube'></div>
-        <div class='cube'></div>
-        <div class='cube'></div>
-        <div class='cube'></div>
-        <div class='cube'></div>
-        <div class='cube'></div>
-        <div class='cube'></div>
-      </div>
+         <div class="logo"></div>
+         <div class='base'>
+           <div class='cube'></div>
+           <div class='cube'></div>
+           <div class='cube'></div>
+           <div class='cube'></div>
+           <div class='cube'></div>
+           <div class='cube'></div>
+           <div class='cube'></div>
+           <div class='cube'></div>
+           <div class='cube'></div>
+         </div>
     </div>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
