@@ -5,7 +5,7 @@
       <Menu></Menu>
     </a-layout-header>
     <a-layout-content style="padding: 0 20px">
-      <div :style="{ background: '#fff', padding: '24px', height: '100%' }">
+      <div :style="{ background: '#fff',padding: '20px', height: '100%' }">
         <router-view />
       </div>
     </a-layout-content>
