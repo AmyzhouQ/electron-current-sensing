@@ -43,7 +43,9 @@
 <script setup>
 import { ref } from "vue";
 let historySearchForm = ref({
-    
+  deviceName: "",
+  address: "",
+  time: []
 })
 let batteryList = ref([
   {
