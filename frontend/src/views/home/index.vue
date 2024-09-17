@@ -1,6 +1,7 @@
 <template>
   <div class="home-container">
-    <Card v-for="(item, index) in cards" :key="index" :card="item" />    
+    <a-empty v-if="cards.length === 0"/>
+    <Card v-else v-for="(item, index) in cards" :key="index" :card="item" />    
   </div>
 </template>
 
