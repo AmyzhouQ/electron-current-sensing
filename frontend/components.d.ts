@@ -17,6 +17,7 @@ declare module 'vue' {
     ALayoutSider: typeof import('ant-design-vue/es')['LayoutSider']
     AMenu: typeof import('ant-design-vue/es')['Menu']
     AMenuItem: typeof import('ant-design-vue/es')['MenuItem']
+    Logo: typeof import('./src/components/Logo/index.vue')['default']
     Menu: typeof import('./src/components/Menu/index.vue')['default']
     Menus: typeof import('./src/components/Menus/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

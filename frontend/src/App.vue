@@ -1,16 +1,15 @@
 <template>
-  <a-layout class="layout">
+  <a-layout class="full-screen-app">
     <a-layout-header>
-      <!-- 图标 -->
-      <div class="logo" />
+      <Logo size="50px" style="margin: 7px 20px 0 0"/>
       <Menu></Menu>
     </a-layout-header>
     <a-layout-content style="padding: 0 20px">
-      <div :style="{ background: '#fff', padding: '24px', minHeight: '280px' }">Content</div>
+      <div :style="{ background: '#fff', padding: '24px', height: '100%' }">
+        Content
+      </div>
     </a-layout-content>
-    <a-layout-footer style="text-align: center">
-      Ant Design ©2018 Created by Ant UED
-    </a-layout-footer>
+    <a-layout-footer style="text-align: center"> xxxxxxx </a-layout-footer>
   </a-layout>
 </template>
 
@@ -19,25 +18,19 @@ export default {
   name: "App",
   setup() {
     document.getElementById("loadingPage").remove();
-    const contentStyle = {
-      textAlign: "center",
-      minHeight: 120,
-      lineHeight: "120px",
-      color: "#fff",
-      backgroundColor: "#108ee9",
-    };
-    const siderStyle = {
-      textAlign: "center",
-      lineHeight: "120px",
-      color: "#fff",
-      backgroundColor: "#3ba0e9",
-    };
-    const footerStyle = {
-      textAlign: "center",
-      color: "#fff",
-      backgroundColor: "#7dbcea",
-    };
   },
 };
 </script>
-<style lang="less"></style>
+<style lang="less" scoped>
+.full-screen-app {
+  height: 100vh;
+  .ant-layout-header {
+    background: #001529;
+    display: flex;
+    padding-left: 50px
+  }
+  .ant-layout-footer{
+    padding: 10px 50px;
+  }
+}
+</style>
