@@ -6,7 +6,7 @@
     </a-layout-header>
     <a-layout-content style="padding: 0 20px">
       <div :style="{ background: '#fff', padding: '24px', height: '100%' }">
-        Content
+        <router-view />
       </div>
     </a-layout-content>
     <a-layout-footer style="text-align: center"> xxxxxxx </a-layout-footer>

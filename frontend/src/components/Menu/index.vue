@@ -1,20 +1,30 @@
 <template>
-  <a-menu v-model:selectedKeys="selectedMenu" mode="horizontal" :items="menuItems" :theme="theme" />
+  <a-menu
+    v-model:selectedKeys="selectedMenu"
+    mode="horizontal"
+    :items="menuItems"
+    :theme="theme"
+    @click="handleMenuClick"
+  />
 </template>
 <script setup>
 import { h, ref } from "vue";
+import { useRouter } from 'vue-router';
 import {
   DashboardOutlined,
   InsertRowAboveOutlined,
 } from "@ant-design/icons-vue";
-const theme = ref('dark');
-const selectedMenu = ref(["electricity"]);
+
+const router = useRouter();
+
+const theme = ref("dark");
+const selectedMenu = ref(["home"]);
 const menuItems = ref([
   {
-    key: "electricity",
+    key: "home",
     icon: () => h(DashboardOutlined),
     label: "电流",
-    title: "electricity",
+    title: "home",
   },
   {
     key: "history",
@@ -23,4 +33,8 @@ const menuItems = ref([
     title: "history",
   },
 ]);
+
+function handleMenuClick({ key }) {
+  router.push("/" + key); // 路由跳转
+}
 </script>
