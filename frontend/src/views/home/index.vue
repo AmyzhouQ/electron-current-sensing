@@ -1,9 +1,5 @@
 <template>
   <div class="home-container">
-    <div class="home-header">
-      <a-button type="primary" @click="showModal">新增电流</a-button>
-      <a-button type="primary" class="btn" @click="setParams">设置参数</a-button>
-    </div>
     <a-empty v-if="cards.length === 0" />
     <div class="home-cards">
       <Card v-for="(item, index) in cards" :key="index" :card="item" />

@@ -13,6 +13,7 @@ import { useRouter } from 'vue-router';
 import {
   DashboardOutlined,
   InsertRowAboveOutlined,
+  ApartmentOutlined
 } from "@ant-design/icons-vue";
 
 const router = useRouter();
@@ -25,6 +26,12 @@ const menuItems = ref([
     icon: () => h(DashboardOutlined),
     label: "电流",
     title: "home",
+  },
+  {
+    key: "device",
+    icon: () => h(ApartmentOutlined),
+    label: "设备",
+    title: "device",
   },
   {
     key: "history",
